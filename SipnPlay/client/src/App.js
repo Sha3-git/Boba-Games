@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Menu from "./pages/Menu"
 import Schedule from "./pages/Schedule"
 import About from "./pages/About"
+import Games from "./pages/Games"
 
 import CalEvent from "./components/CalEvent"
 
@@ -18,6 +19,7 @@ function App() {
           <Route path="/Menu" element={<Menu />} />
           <Route path="/Calendar" element={<Schedule />} />
           <Route path="/about" element={<About />} />
+          <Route path="/games" element={<Games />} />
         </Routes>
       </BrowserRouter>
     </>

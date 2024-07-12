@@ -5,8 +5,8 @@ function Header() {
     <>
       <div>
         <nav className={`navbar navbar-expand-lg bg-body-tertiary`}>
-          <div class="container-fluid pl-5">
-            <a class="navbar-brand ms-5" href="#">
+          <div className="container-fluid pl-5">
+            <a className="navbar-brand ms-5" href="#">
               Navbar
             </a>
             <button
@@ -38,6 +38,11 @@ function Header() {
                 <div className="col-lg-1 text-center mb-2">
                   <a className="navItem fs-5" href="/Calendar">
                     Events
+                  </a>
+                </div>
+                <div className="col-lg-1 text-center mb-2">
+                  <a className="navItem fs-5" href="/games">
+                    Games
                   </a>
                 </div>
               </div>
