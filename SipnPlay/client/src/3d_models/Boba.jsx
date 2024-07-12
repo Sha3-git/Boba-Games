@@ -205,7 +205,7 @@ const Boba = (  {isRotating,
 
 
     return (
-        <a.group ref={islandRef} {...props}>
+        <a.group ref={islandRef} {...props} >
             <mesh
                 geometry={nodes.Cup_01_Boba_Cup_Plastic_01_0.geometry}
                 material={materials.Boba_Cup_Plastic_01}
