@@ -37,6 +37,15 @@
   }
 }
 
+
+
+input[type=datetime-local]{
+  border-radius: 5%;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(194, 194, 194);
+  padding: 2%;
+}
 .nav-line {
   width: 0;
   animation: lineAnimate 1s forwards ease-in-out;
@@ -105,3 +114,4 @@ body {
   outline: none;
   transform: scaleX(1);
 }
+
