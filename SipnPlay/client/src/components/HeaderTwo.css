@@ -1,0 +1,176 @@
+/******************************************
+/* navigation
+/*******************************************/
+
+.header-nav {
+  --dark-chocolate: #241306;
+  --crema: #AA8B73;
+  --coffee-cream: #F4ECE6;
+  --matcha: #809671;
+  --mostly-milk: #DEE9D3;
+  --blush: #F0DDD1;
+  --dark-crayola: #F0DDD1;
+  --burgundy-love: #330313;
+  
+
+/*  desktop: 1280×720  mobile: 360×640 */
+/* vw value is relative to the viewport width, and so 10vw is 10 percent of the width of the viewport. */
+
+  --font-size-hero: clamp(6.85rem, 11.930435vi + 4.17rem, 13.71rem);
+  --font-size-large: clamp(4.24rem, 7.356522vi + 2.58rem, 8.47rem);
+  --font-size-medium: clamp(2.62rem, 4.556522vi + 1.59rem, 5.24rem);
+  --font-size-small:  clamp(1rem, 1.73913vi + 0.61rem, 2rem);
+
+  --card-radius: 1rem;
+}
+
+
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: var(--dark-chocolate);
+  color: var(--crema);
+}
+
+.header li a {
+  display: block;
+  padding: 20px 20px;
+  /* border-right: 1px solid #f4f4f4; */
+  text-decoration: none;
+  color: var(--crema);
+}
+
+.header-nav {
+  background: var(--dark-chocolate);
+  /* border-top: 2px var(--dark-sage) solid;
+  border-bottom: 2px var(--dark-sage) solid; */
+
+
+  height: 64px;
+}
+
+.header li a:hover,
+.header .menu-btn:hover {
+  background-color: var(--crema);
+  color: var(--dark-chocolate);
+}
+
+.header .logo {
+  /* display: block;
+  float: left; */
+  /* font-size: 2em; */
+  /* padding: 10px 20px;
+  text-decoration: none; */
+  position: absolute;
+  padding-top: 0.5rem;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  max-height: 2rem;
+
+}
+
+/* menu */
+
+.header .menu {
+  max-height: 0;
+  transition: max-height .2s ease-out;
+}
+
+/* menu icon */
+
+.header .menu-icon {
+  cursor: pointer;
+  /* display: inline-block; */
+  display: flex;
+  justify-content: flex-end;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+}
+
+.header .menu-icon .navicon {
+  background: var(--crema);
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 18px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+  background: var(--crema);
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+  top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+  top: -5px;
+}
+
+/* menu btn */
+
+.header .menu-btn {
+  display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+  max-height: 240px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+/* 48em = 768px */
+
+@media (min-width: 54em) {
+  .header li {
+    float: right;
+  }
+  .header li a {
+    padding: 20px 30px;
+  }
+  .header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  .header .menu-icon {
+    display: none;
+  }
+}
+
+  @media (max-width: 54em) {
+    .logo img{
+      /* display: none; */
+      max-height: 3rem;
+      margin: 0;
+    }
+}
+
+
