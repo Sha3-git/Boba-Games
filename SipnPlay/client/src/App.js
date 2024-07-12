@@ -11,9 +11,9 @@ function App() {
         <Routes>
           <Route path="/schedule" element={<Schedule/>} />
           <Route path="/Menu"element={<Menu/>} />
+          <Route path="/Calendar"element={<CalEvent />} />
         </Routes>
 
-        <CalEvent />
       </BrowserRouter>
     </>
   );
