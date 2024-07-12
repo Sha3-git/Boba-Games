@@ -21,9 +21,11 @@ mongoose.connect(configuration.MONGODB_URI)
 
 app.use(cors());
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 app.use("/api/events", middleware.requestLogger, eventRouter);
 app.use(middleware.requestLogger);
 app.use(middleware.unknownEndpoint);
 app.use(middleware.errorHandler);
+
 
 module.exports = app;
