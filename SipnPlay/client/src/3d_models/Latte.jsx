@@ -203,7 +203,6 @@ const Latte = ({ isRotating,
         }
     });
 
-
     return (
         <a.group ref={islandRef} {...props} >
             <group scale={0.05}>
