@@ -1,0 +1,79 @@
+
+.all-about{
+  --dark-chocolate: #241306;
+  --crema: #AA8B73;
+  --coffee-cream: #F4ECE6;
+  --matcha: #809671;
+  --mostly-milk: #DEE9D3;
+  --blush: #F0DDD1;
+  --dark-crayola: #F0DDD1;
+  --burgundy-love: #330313;
+  
+
+
+/*  desktop: 1280×720  mobile: 360×640 */
+/* vw value is relative to the viewport width, and so 10vw is 10 percent of the width of the viewport. */
+
+  --font-size-hero: clamp(6.85rem, 11.930435vi + 4.17rem, 13.71rem);
+  --font-size-large: clamp(4.24rem, 7.356522vi + 2.58rem, 8.47rem);
+  --font-size-medium: clamp(2.62rem, 4.556522vi + 1.59rem, 5.24rem);
+  --font-size-small:  clamp(1rem, 1.73913vi + 0.61rem, 2rem);
+
+  --card-radius: 1rem;
+
+  background-color: var(--coffee-cream);
+  height: 100%
+}
+
+.about,
+.mission {
+  display: grid;
+  align-items: center;
+  gap: 3rem;
+  padding: 1.5rem;
+
+}
+
+.about-title,
+.mission-title {
+  color: var(--dark-chocolate);
+  /* font-family: var(--title-font); */
+}
+.about-description,
+.mission-description {
+  line-height: 1.75;
+  /* font-family: var(--body-font); */
+}
+.about-img-wrapper,
+.mission-img-wrapper {
+  margin: auto;
+}
+
+
+.image-wrapper {
+  background-color: var(--matcha);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  border-radius: var(--card-radius);
+}
+
+img{
+
+  width: 100%;
+  height: auto;
+} 
+
+@media screen and (min-width: 950px) {
+  .about,
+  .mission {
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .image-wrapper {
+    padding: 45px;
+  }
+}
