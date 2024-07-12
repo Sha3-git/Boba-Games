@@ -38,6 +38,7 @@
 }
 
 
+
 input[type=datetime-local]{
   border-radius: 5%;
   border-style: solid;
@@ -45,3 +46,72 @@ input[type=datetime-local]{
   border-color: rgb(194, 194, 194);
   padding: 2%;
 }
+.nav-line {
+  width: 0;
+  animation: lineAnimate 1s forwards ease-in-out;
+}
+
+a,
+a:hover,
+a:focus {
+  color: rgb(18, 31, 26);
+  text-decoration: none;
+}
+
+hr {
+  background: rgb(20, 19, 19);
+}
+
+body {
+  background-color: rgb(235, 222, 235);
+  height: 100%;
+  color: rgb(0, 0, 0);
+}
+
+.navItem {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 5px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 100;
+}
+.card-img-top{
+  border-radius: 4%;
+}
+.card{
+  border: none !important;
+  border-radius: 4%;
+}
+
+
+.navItem:before,
+.navItem:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background-color: #35cc85;
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+
+.navItem:hover:before,
+.navItem:hover:after {
+  transform: scaleX(1);
+}
+
+/* Optional: Add focus styles if needed */
+.navItem:focus {
+  outline: none;
+}
+
+/* Optional: Add transition for focus */
+.navItem:focus-visible {
+  outline: none;
+  transform: scaleX(1);
+}
+
