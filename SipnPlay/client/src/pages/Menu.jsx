@@ -7,6 +7,7 @@ import Loader from '../components/Loader'
 import Boba from '../3d_models/Boba.jsx'
 import Latte from '../3d_models/Latte.jsx';
 import Coco from '../3d_models/Coco.jsx';
+import Header from "../components/Header"
 
 function Menu() {
 
@@ -32,6 +33,7 @@ function Menu() {
 
   return (
     <>
+       <Header />
       <Container fluid className='my-5'>
       <Row>
         <Col md={6} className="d-flex flex-column justify-content-center align-items-center text-center" style={{ height: '50vh' }}>
