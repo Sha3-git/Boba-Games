@@ -26,7 +26,7 @@ function CalEvent() {
   useEffect(() => {
     const fetchEvents = async () => {
       try {
-        const response = await axios.get('http://localhost:4000/api/events');
+        const response = await axios.get('https://sip-n-play.vercel.app/api/events');
         const fetchedEvents = response.data.map(event => {
           const start = moment.tz(event.start_date, 'UTC').tz(moment.tz.guess()).toDate();
           const end = moment.tz(event.end_date, 'UTC').tz(moment.tz.guess()).toDate();
