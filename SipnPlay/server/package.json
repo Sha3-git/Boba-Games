@@ -1,12 +1,22 @@
 {
-  "name": "server",
+  "name": "backend",
   "version": "1.0.0",
-  "description": "",
+  "description": "Board game cafe website",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "echo \\\"Error: no test specified\\\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "author": "Megha, Shema, Laura",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "express-async-errors": "^3.1.1",
+    "mongoose": "^8.5.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
 }
