@@ -11,9 +11,18 @@ export default function Home() {
                         <div class="card">
                             <div class="card-body">
                                 <img src="https://www.shutterstock.com/image-photo/pink-restaurant-food-aesthetic-frankfurt-600nw-2291701097.jpg" class="card-img-top" alt="..." />
-                                <h5 class="card-title .fs-1"> News and Media</h5>
-                                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                                <a href="#" class="btn custom-button">Go somewhere</a>
+                                <h5 class="card-title .fs-1 mt-5"> News and Media</h5>
+                                <h6 class="card-subtitle mb-2 text-muted"><hr /></h6>
+                                <h6 class="card-subtitle mb-2 text-muted">'BOARD GAME CAFE' OPENS ON PARK SLOPE'S FIFTH AVENUE</h6>
+                                <p class="card-text">
+                                    
+                                    January 2, 2020
+                                    Anna Quinn from Patch discusses how Sip & Play plans to build upon the foundation it has laid for the concept.
+
+                                    "He spent the last few months completely revamping the space inside, adding large tables for optimal game play and building out a menu he says offers more than many board game cafes ..."
+
+                                    "The 200-game catalogue of board games available to borrow might also grow... Customers are welcome to make suggestions about games they'd like to see him add."</p>
+                                <a href="https://patch.com/new-york/parkslope/board-game-cafe-opens-park-slopes-fifth-avenue" class="btn custom-button navItem">Read More</a>
                             </div>
                         </div>
                     </div>
@@ -32,11 +41,11 @@ export default function Home() {
                                 </div>
                             </div>
                             <div className="mt-4">
-                                <div class="card" style={{ width: "100%", height: "600px" }}>
+                                <div class="card" style={{ width: "100%", height: "520px" }}>
                                     <div class="card-body">
                                         <img src="https://i.ibb.co/wrMWLVb/image-2024-07-12-090511776.png" style={{ scale: "1" }} class="card-img-top" alt="..." />
                                         <br />
-                                        <p class="card-text mt-3"><a className="navItem" href="">Map Location</a></p>
+                                        <p class="card-text mt-3"><a className="navItem" href="https://www.google.com/maps/dir/50.429952,-104.5037056/471+5th+Ave,+Brooklyn,+NY+11215,+USA/@43.2099889,-110.328374,4z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x89c25afce910cb65:0x51750a9972fb4c0a!2m2!1d-73.9869174!2d40.668125?entry=ttu">Map Location</a></p>
                                     </div>
                                 </div>
                             </div>
