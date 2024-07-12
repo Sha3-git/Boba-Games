@@ -15,7 +15,7 @@ function App() {
           <Route path="/"element={<Home/>} />
           <Route path="/schedule" element={<Schedule/>} />
           <Route path="/Menu"element={<Menu/>} />
-          <Route path="/Calendar"element={<CalEvent />} />
+          <Route path="/Calendar"element={<Schedule />} />
         </Routes>
 
       </BrowserRouter>
