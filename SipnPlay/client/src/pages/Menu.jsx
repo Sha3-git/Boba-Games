@@ -51,11 +51,9 @@ function Menu() {
               <spotLight />
               <hemisphereLight />
               <Boba
-                isRotating={isRotating}
-                setIsRotating={setIsRotating}
                 setCurrentStage={setCurrentStage}
                 position={islandPosition}
-                rotation={[0, 0, 0]}
+                rotation={[0, 0, -0.3]}
                 scale={islandScale}
               />
                 </Canvas>
