@@ -16,11 +16,6 @@ const Boba = ({ setCurrentStage, ...props }) => {
   const islandRef = useRef();
   const { nodes, materials } = useGLTF(bobaScene);
 
-  // Create toon materials
-  const bobaCupMaterial = new THREE.MeshToonMaterial({ color: 0xffc0cb });
-  const lidMaterial = new THREE.MeshToonMaterial({ color: 0xffffff });
-  const strawMaterial = new THREE.MeshToonMaterial({ color: 0xb66cd4 });
-  const milkTeaMaterial = new THREE.MeshToonMaterial({ color: 0xd46ca7 });
 
   useFrame(() => {
     // Rotate the model continuously

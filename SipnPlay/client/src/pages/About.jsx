@@ -1,4 +1,3 @@
-import "./About.css"
 import Header from "../components/Header"
 import someonecool from "../assets/images/someone.cool.png"
 import bobahappy from "../assets/images/boba-happy.png"
