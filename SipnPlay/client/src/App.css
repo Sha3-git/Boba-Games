@@ -136,6 +136,14 @@ body {
 }
 
 .fs-1.menu{
+  font-size: 3.8rem !important;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  line-height: 100%;
+}
+
+.fs-1.m-title{
   font-size: 4.8rem !important;
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;

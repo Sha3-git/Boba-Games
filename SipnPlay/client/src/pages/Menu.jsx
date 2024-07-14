@@ -36,6 +36,17 @@ function Menu() {
       <Header />
       <div className='container-fluid ms-lg-5'>
         <div className='container-fluid w-75'>
+          <div className="row mt-5 mb-5 pt-lg-5 pb-lg-5">
+            <div className="col-lg-4 d-flex align-items-center">
+              <hr className='w-100' />
+            </div>
+            <div className="col-lg-4 ">
+              <p className="fs-1 m-title fw-bold text-center ">MENU</p>
+            </div>
+            <div className="col-lg-4  d-flex align-items-center">
+              <hr className='w-100' />
+            </div>
+          </div>
           <div className="row">
             <div className=" col-lg-6 d-flex align-items-start text-start pt-lg-5 mt-lg-4">
               <div className="row">
@@ -49,7 +60,7 @@ function Menu() {
                   <span className="fs-4 ps-lg-5 fw-bold">23</span>
                 </div>
                 <div className='mt-5 fs-4'>
-                <p>A boba pearl latte is a delightful beverage that combines rich, creamy milk tea with chewy tapioca pearls, also known as boba. This refreshing drink features the perfect balance of sweet and smooth flavors, with the pearls adding a fun, unique texture to each sip. Often enjoyed chilled, the boba pearl latte is a popular choice for both tea enthusiasts and those seeking a delicious, trendy treat.</p>
+                  <p>A boba pearl latte is a delightful beverage that combines rich, creamy milk tea with chewy tapioca pearls, also known as boba. This refreshing drink features the perfect balance of sweet and smooth flavors, with the pearls adding a fun, unique texture to each sip. Often enjoyed chilled, the boba pearl latte is a popular choice for both tea enthusiasts and those seeking a delicious, trendy treat.</p>
 
                 </div>
               </div>
@@ -77,6 +88,54 @@ function Menu() {
                     setCurrentStage={setCurrentStage}
                     position={islandPosition}
                     rotation={[0, 0, -0.3]}
+                    scale={islandScale}
+                  />
+                </Canvas>
+              </Suspense>
+            </div>
+          </div>
+
+          <div className="row mt-5">
+            <div className=" col-lg-6 d-flex align-items-start text-start pt-lg-5 mt-lg-4">
+              <div className="row">
+                <div className="fs-1 menu fw-bold">Mocha Latte</div>
+                <div className="mt-5">
+                  <span className="fa fa-star checked "></span>
+                  <span className="fa fa-star checked"></span>
+                  <span className="fa fa-star checked"></span>
+                  <span className="fa fa-star checked"></span>
+                  <span className="fa fa-star checked"></span>
+                  <span className="fs-4 ps-lg-5 fw-bold">24</span>
+                </div>
+                <div className='mt-5 fs-4'>
+                  <p>A mocha latte at sip n' play is a luxurious blend of bold espresso, creamy steamed milk, and rich chocolate, finished with a light foam topping. This indulgent beverage combines the deep flavors of coffee and cocoa, offering a perfect balance of sweetness and richness. Ideal for any time of day, our mocha latte is a comforting and invigorating treat that will satisfy both coffee and chocolate lovers.</p>
+
+                </div>
+              </div>
+            </div>
+            <div className=" col-lg-6 mt-sm-5 d-flex justify-contents-end" >
+              <Suspense fallback={<Loader />}>
+                <Canvas shadows camera={{ near: 0.1, far: 1000 }} style={{ width: '100%', height: '500px' }}>
+                  <directionalLight
+                    position={[-20, 10, 0]} // Position the light to the left
+                    intensity={15}
+                    castShadow
+                    shadow-mapSize-width={1024}
+                    shadow-mapSize-height={1024}
+                    shadow-camera-far={50}
+                    shadow-camera-left={-5}
+                    shadow-camera-right={10}
+                    shadow-camera-top={10}
+                    shadow-camera-bottom={-10}
+                  />
+                  <ambientLight intensity={2} />
+                  <pointLight />
+                  <spotLight />
+                  <hemisphereLight />
+                  <Latte
+                    setCurrentStage={setCurrentStage}
+                    position={islandPosition}
+                    rotation={[0, 0, 0]}
                     scale={islandScale}
                   />
                 </Canvas>

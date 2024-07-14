@@ -24,7 +24,7 @@ const Boba = ({ setCurrentStage, ...props }) => {
 
   useFrame(() => {
     // Rotate the model continuously
-    islandRef.current.rotation.y += 0.01;
+    islandRef.current.rotation.y += 0.0025;
 
     // Determine the current stage based on island's orientation
     const rotation = islandRef.current.rotation.y;
