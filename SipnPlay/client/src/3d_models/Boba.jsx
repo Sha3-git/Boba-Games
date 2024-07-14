@@ -4,17 +4,23 @@
  * by Adrian Hajdin
  */
 
-
 import { useGLTF } from '@react-three/drei';
 import { useFrame } from '@react-three/fiber'
 import { useRef } from 'react';
 import { a } from '@react-spring/three'; //animation enabled
+import * as THREE from 'three'; // Import three.js for MeshToonMaterial
 
 import bobaScene from '../assets/boba_tea_cup.glb';
 
 const Boba = ({ setCurrentStage, ...props }) => {
   const islandRef = useRef();
   const { nodes, materials } = useGLTF(bobaScene);
+
+  // Create toon materials
+  const bobaCupMaterial = new THREE.MeshToonMaterial({ color: 0xffc0cb });
+  const lidMaterial = new THREE.MeshToonMaterial({ color: 0xffffff });
+  const strawMaterial = new THREE.MeshToonMaterial({ color: 0xb66cd4 });
+  const milkTeaMaterial = new THREE.MeshToonMaterial({ color: 0xd46ca7 });
 
   useFrame(() => {
     // Rotate the model continuously
@@ -48,27 +54,38 @@ const Boba = ({ setCurrentStage, ...props }) => {
     <a.group ref={islandRef} {...props} >
       <mesh
         geometry={nodes.Cup_01_Boba_Cup_Plastic_01_0.geometry}
+        /*material={bobaCupMaterial}*/
         material={materials.Boba_Cup_Plastic_01}
         position={[0, 0.1, 0.1]}
         scale={[1, 0.1, 1]}
+        castShadow
+        receiveShadow
       />
       <mesh
         geometry={nodes.Lid_01_Boba_Cup_Plastic_01_0.geometry}
+        /*material={lidMaterial}*/
         material={materials.Boba_Cup_Plastic_01}
         position={[0, 4.5, 0.1]}
         scale={[1.5, 0.1, 1.5]}
+        castShadow
+        receiveShadow
       />
       <mesh
         geometry={nodes.straw_01_Boba_Straw_01_0.geometry}
-        material={materials.Boba_Straw_01}
+        material={strawMaterial}
         position={[0, 4, 0.1]}
         scale={[0.3, 3.6, 0.3]}
+        castShadow
+        receiveShadow
       />
       <mesh
         geometry={nodes.pCylinder1_MILKTEA_0.geometry}
+        /*material={milkTeaMaterial}*/
         material={materials.MILKTEA}
         position={[0, 0.3, 0.1]}
         scale={[0.8, 0.2, 0.8]}
+        castShadow
+        receiveShadow
       />
     </a.group>
   );

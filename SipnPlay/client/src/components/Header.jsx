@@ -6,14 +6,12 @@ function Header() {
   return (
     <>
       
-        <nav className={`navbar navbar-expand-lg bg-body-tertiary sticky-navbar`}>
-          <div className="container-fluid pl-5">
-            <a className="navbar-brand ms-5" href="/">
+        <nav className={`navbar navbar-expand-lg sticky-navbar`}>
+          <div className="container-fluid w-75">
+            <a className="navbar-brand ms-lg-5" href="/">
               <img
                 src={logo}
                 alt="home pic"
-                className="img-fluid logo"
-                style={{ maxHeight: "100px" }}
               />
             </a>
             <button
@@ -28,7 +26,7 @@ function Header() {
               <span className="navbar-toggler-icon"></span>
             </button>
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
-              <div className={`row w-100 `}>
+              <div className={`row w-100 d-flex justify-content-end me-lg-5`}>
                 <div className="col-lg-8 ps-5">
                   <hr className="nav-line"></hr>
                 </div>

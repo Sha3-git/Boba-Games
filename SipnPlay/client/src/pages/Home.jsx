@@ -1,88 +1,83 @@
 import Header from "../components/Header"
-
+import carousel1 from "../assets/images/carousel_img.gif"
 
 export default function Home() {
     return (
         <>
             <Header />
-            <div className="container-fluid mt-5 pt-5 ">
-                <div className="row justify-content-center">
-                    <div className="col-lg-3  col-sm-1 .fs-1 mt-2 d-flex justify-content-center">
-                        <div class="card">
-                            <div class="card-body">
-                                <img src="https://www.shutterstock.com/image-photo/pink-restaurant-food-aesthetic-frankfurt-600nw-2291701097.jpg" class="card-img-top" alt="..." />
-                                <h5 class="card-title .fs-1 mt-5"> News and Media</h5>
-                                <h6 class="card-subtitle mb-2 text-muted"><hr /></h6>
-                                <h6 class="card-subtitle mb-2 text-muted">'BOARD GAME CAFE' OPENS ON PARK SLOPE'S FIFTH AVENUE</h6>
-                                <p class="card-text">
-                                    
-                                    January 2, 2020
-                                    Anna Quinn from Patch discusses how Sip & Play plans to build upon the foundation it has laid for the concept.
-
-                                    "He spent the last few months completely revamping the space inside, adding large tables for optimal game play and building out a menu he says offers more than many board game cafes ..."
-
-                                    "The 200-game catalogue of board games available to borrow might also grow... Customers are welcome to make suggestions about games they'd like to see him add."</p>
-                                <a href="https://patch.com/new-york/parkslope/board-game-cafe-opens-park-slopes-fifth-avenue" class="btn custom-button navItem">Read More</a>
+            <div className="container-fluid ms-lg-5 ">
+                <div className="container-fluid w-75">
+                    <div className="row d-flex justify-content-start pt-5">
+                        <div className="col-lg-6 d-flex align-items-end">
+                            <p className="fs-1 fw-medium jumbo-letters">
+                                sip n' play
+                            </p>
+                        </div>
+                        <div className="col-lg-2 d-flex align-items-end justify mt-5 p-2">play boardgames from our collection of over 500+ games! Just $10 a person for 3 hours of gameplay all while enjoying our menu items</div>
+                    </div>
+                    <div className="mt-5 me-lg-5">
+                        <div className="row pt-5  ">
+                            <div className="col-lg-9 pe-lg-5">
+                                <div id="carouselExampleIndicators" class="carousel slide  custom-carousel">
+                                    <div class="carousel-indicators">
+                                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                    </div>
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <img src={carousel1} className="d-block w-100 img-fluid" alt="..." style={{ height: "45rem" }} />
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="..." class="d-block w-100" alt="..." />
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="..." class="d-block w-100" alt="..." />
+                                        </div>
+                                    </div>
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div className="col-lg-3 d-flex justify-content-end ">
+                                <div className="row d-flex justify-content-end ps-lg-5">
+                                    <div class="card mt-5 mt-lg-1 optionc">
+                                        <div class="card-body d-flex align-items-end justify-content-end">
+                                            <button type="button" className="btn btn-outline-secondary btn-lg p-4">Reserve</button>
+                                        </div>
+                                    </div>
+                                    <div class="card mt-5 mt-lg-1 optiond">
+                                        <div class="card-body d-flex align-items-end justify-content-end">
+                                            <button type="button" className="btn btn-outline-secondary btn-lg p-4">Map</button>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <button type="button" className="mt-5 mt-lg-1 btn btn-custom btn-lg p-4">Reserve</button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div className="col-lg-4 col-sm-1 .fs-2 mt-2">
-                        <div className="row">
-                            <div>
-                                <div class="card" style={{ width: "100%", height: "400px" }}>
-                                    <div class="card-body">
-                                        <h5 class="card-title">How It Works!</h5>
-                                        <h6 class="card-subtitle mb-2 text-muted"><hr /></h6>
-                                        <br /><br />
-                                        <p class="card-text">Come on in with your friends and family and play boardgames from our collection of over 500+ games! Just $10 a person for 3 hours of gameplay. ($12 a person Friday-Sunday and Holidays) Play while enjoying bubble tea, coffee, beer sandwiches or salads and have a great time! If you want to guarantee a table, you can make a reservation which is $15 a person for 3 hours of gameplay. </p>
-                                        <img src="https://78.media.tumblr.com/0f339401897b69161534abe5989bc7e3/tumblr_p1oe741BmU1wp3fx2o4_1280.png" class="card-img-top" alt="..." />
-                                    </div>
+                    <div className="mt-5 mb-5 pe-lg-5 pt-lg-5">
+                        <div class="card heurs shadow">
+                            <div class="card-body ms-lg-5 d-flex align-items-center justify-content-start" style={{color: "white"}}>
+                                <p className="fs-3">
+                                    <b >Opening hours</b> <br/>
+                                    <hr/>
+                                    Sunday: 10am-11pm <br/>
+                                    Mon-Thurs: 11am-11pm <br/>
+                                    Fri: 11am-midnight <br/>
+                                    Sat: 10am-midnight <br/>
+                                    Our kitchen closes 2.5-3 hours before we close!
 
-                                </div>
-                            </div>
-                            <div className="mt-4">
-                                <div class="card" style={{ width: "100%", height: "520px" }}>
-                                    <div class="card-body">
-                                        <img src="https://i.ibb.co/wrMWLVb/image-2024-07-12-090511776.png" style={{ scale: "1" }} class="card-img-top" alt="..." />
-                                        <br />
-                                        <p class="card-text mt-3"><a className="navItem" href="https://www.google.com/maps/dir/50.429952,-104.5037056/471+5th+Ave,+Brooklyn,+NY+11215,+USA/@43.2099889,-110.328374,4z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x89c25afce910cb65:0x51750a9972fb4c0a!2m2!1d-73.9869174!2d40.668125?entry=ttu">Map Location</a></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-lg-3  col-sm-1 .fs-1 mt-2">
-                        <div class="card" style={{ width: "18rem" }}>
-                            <div class="card-body">
-                                <h5 class="card-title">Reservations are For Any Party Size!</h5>
-                                <h6 class="card-subtitle mb-2 text-muted"><hr /></h6>
-                                <p class="card-text">For large parties (9+ or more people), please email us at sipnplaynyc@gmail.com to inquire about a reservation.</p>
-                                <a href="https://www.exploretock.com/sipnplay" className="card-link navItem">Make Reservation</a>
-                            </div>
-                        </div>
-
-                        <div class="card mt-4 mt-2" style={{ width: "18rem" }}>
-                            <img src="https://604now.com/wp-content/uploads/2022/11/Featured-Image-3-1024x683.jpg" class="card-img-top" alt="..." />
-                            <div class="card-body">
-                                <h5 class="card-title">Hours and Location</h5>
-                                <p class="card-text">
-                                    <b>New opening hours:</b> <br />
-
-                                    Sunday: 10am-11pm <br />
-
-                                    Mon-Thurs: 11am-11pm <br />
-
-                                    Fri: 11am-midnight <br />
-
-                                    Sat: 10am-midnight <br />
                                 </p>
                             </div>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item">471 5th Ave.</li>
-                                <li class="list-group-item">Brooklyn, NY 11215</li>
-                                <li class="list-group-item">sipnplaynyc@gmail.com</li>
-                                <li class="list-group-item">718-971-1684</li>
-                            </ul>
                         </div>
                     </div>
                 </div>
