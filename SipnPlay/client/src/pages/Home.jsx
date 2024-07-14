@@ -13,7 +13,7 @@ export default function Home() {
                                 sip n' play
                             </p>
                         </div>
-                        <div className="col-lg-2 d-flex align-items-end justify mt-5 p-2">play boardgames from our collection of over 500+ games! Just $10 a person for 3 hours of gameplay all while enjoying our menu items</div>
+                        <div className="col-lg-6 d-flex align-items-end justify mt-5 p-2">play boardgames from our collection of over 500+ games! Just $10 a person for 3 hours of gameplay all while enjoying our menu items</div>
                     </div>
                     <div className="mt-5 me-lg-5">
                         <div className="row pt-5  ">
