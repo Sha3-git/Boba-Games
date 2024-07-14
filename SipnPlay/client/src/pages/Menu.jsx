@@ -145,69 +145,8 @@ function Menu() {
         </div>
       </div>
       <Container fluid className='my-5'>
-        <Row>
-          <Col md={6} className="d-flex flex-column justify-content-center align-items-center text-center" style={{ height: '50vh' }}>
-            <div>
-              <h3>Boba Tea</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque est odio impedit quaerat ipsa fugit dicta a deleniti! Dolore minima ut fugiat omnis ea quo voluptate suscipit obcaecati iste. Numquam?</p>
-            </div>
-          </Col>
-          <Col md={6}>
-            <Suspense fallback={<Loader />}>
-              <Canvas shadows camera={{ near: 0.1, far: 1000 }} style={{ width: '100%', height: '500px' }}>
-                <directionalLight
-                  position={[-20, 10, 0]} // Position the light to the left
-                  intensity={15}
-                  castShadow
-                  shadow-mapSize-width={1024}
-                  shadow-mapSize-height={1024}
-                  shadow-camera-far={50}
-                  shadow-camera-left={-5}
-                  shadow-camera-right={10}
-                  shadow-camera-top={10}
-                  shadow-camera-bottom={-10}
-                />
-                <ambientLight intensity={2} />
-                <pointLight />
-                <spotLight />
-                <hemisphereLight />
-                <Boba
-                  setCurrentStage={setCurrentStage}
-                  position={islandPosition}
-                  rotation={[0, 0, -0.3]}
-                  scale={islandScale}
-                />
-              </Canvas>
-            </Suspense>
-          </Col>
-        </Row>
-        <Row>
-          <Col md={6}>
-            <Suspense fallback={<Loader />}>
-              <Canvas camera={{ near: 0.1, far: 1000 }} style={{ width: '100%', height: '300px' }}>
-                <directionalLight />
-                <ambientLight />
-                <pointLight />
-                <spotLight />
-                <hemisphereLight />
-                <Latte
-                  isRotating={isRotating}
-                  setIsRotating={setIsRotating}
-                  setCurrentStage={setCurrentStage}
-                  position={islandPosition}
-                  rotation={[0, 0, 0]}
-                  scale={islandScale}
-                />
-              </Canvas>
-            </Suspense>
-          </Col>
-          <Col md={6} className="d-flex flex-column justify-content-center align-items-center text-center" style={{ height: '50vh' }}>
-            <div>
-              <h3>Coffee Latte </h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque est odio impedit quaerat ipsa fugit dicta a deleniti! Dolore minima ut fugiat omnis ea quo voluptate suscipit obcaecati iste. Numquam?</p>
-            </div>
-          </Col>
-        </Row>
+ 
+       
         <Row>
           <Col md={6} className="d-flex flex-column justify-content-center align-items-center text-center" style={{ height: '50vh' }}>
             <div>
